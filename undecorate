@@ -1,0 +1,3 @@
+#!/bin/sh
+#this script lets you click a window and then removes its decoration (makes it borderless), which is nice for presentations, pos systems and focussed working... happy hacking! 
+xprop -f _MOTIF_WM_HINTS 32c -set  _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"

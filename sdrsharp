@@ -1,0 +1,2 @@
+cd ~/bin/sdr-sharp/sdrsharp/Release
+mono SDRSharp.exe
