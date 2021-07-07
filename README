@@ -2,7 +2,7 @@
 
 this are some scripts i wrote myself to do things more easily on my laptop, you can put them in your ~/bin or /.local/bin directory and if your .bashrc and/or .profile includes some export PATH=$PATH:~/bin or so (default on debian) they will be available wherever you can enter commands ;)
 
-don't forget do do a chmod +x for them to work...
+don't forget to do a chmod +x for them to work...
 
 any comments, feel free to open an issue, feel also free to submit new scripts...
 
@@ -10,4 +10,6 @@ happy Hacking!
 
 PS: you'll need xprop, wmctrl and amixer for them to work, thanks captain obvious but you know somebody will ask if you don't write stuff like this...
 
+on debian based systems you can do
 
+sudo apt install x11-utils alsa-utils wmctrl 
