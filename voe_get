@@ -49,7 +49,7 @@ echo subs=true;
 #	echo $i
 #	lang=$(echo $i | cut -d '"' -f 5)
  #       echo lang=$lang
-	suburl=https://voe.sx/$( grep 'track kind="subtitles	" label="' /tmp/veo_get.out | cut -d '"' -f 8|head -n 1)	
+	suburl=https://voe.sx/$( grep 'track kind="subtitles" label="' /tmp/veo_get.out | cut -d '"' -f 8|head -n 1)	
 lang=$(grep 'track kind="subtitles" label="' /tmp/veo_get.out | cut -d '"' -f 6| head -n 1)
 echo suburl=$suburl
 echo lang=$lang
