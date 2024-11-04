@@ -41,7 +41,7 @@ mp4=$hls
 
 #ytdl_voe -o "$title"-$id.mp4 $mp4
 
-if grep 'track kind="captions" label="' /tmp/veo_get.out; then 
+if grep 'track kind="subtitles" label="' /tmp/veo_get.out; then 
 echo subs=true;
 
 #for i in `grep 'track kind="captions" label="' /tmp/veo_get.out`
@@ -49,19 +49,19 @@ echo subs=true;
 #	echo $i
 #	lang=$(echo $i | cut -d '"' -f 5)
  #       echo lang=$lang
-	suburl=https://voe.sx/$( grep 'track kind="captions" label="' /tmp/veo_get.out | cut -d '"' -f 8|head -n 1)	
-lang=$(grep 'track kind="captions" label="' /tmp/veo_get.out | cut -d '"' -f 6| head -n 1)
+	suburl=https://voe.sx/$( grep 'track kind="subtitles	" label="' /tmp/veo_get.out | cut -d '"' -f 8|head -n 1)	
+lang=$(grep 'track kind="subtitles" label="' /tmp/veo_get.out | cut -d '"' -f 6| head -n 1)
 echo suburl=$suburl
 echo lang=$lang
 
 wget "$suburl" -O "$title"-$id.$lang.vtt
 
-lang='en'
+#lang='en'
 
-wget "$suburl" -O "$title"-$id.$lang.vtt
-lang='de'
-
-wget "$suburl" -O "$title"-$id.$lang.vtt
+#wget "$suburl" -O "$title"-$id.$lang.vtt
+#lang='de'
+#
+#wget "$suburl" -O "$title"-$id.$lang.vtt
 
 #done
 fi
