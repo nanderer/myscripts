@@ -1,0 +1,3 @@
+tail -f /tmp/subcat -n 1 | bash ~/bin/streaming_filter_script.sh 12 | espeak -v de -s 222
+tail -f /tmp/subcat -n 1 | bash ~/bin/streaming_filter_script.sh 12 | tee /dev/stderr |espeak -v de -s 222
+

@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 import sys
 import getopt
+import signal
 from langdetect import detect, LangDetectException
+
+# Funktion zum Beenden der Verarbeitung bei Empfang eines Signals
+def signal_handler(sig, frame):
+    print("\nBeende Verarbeitung...")
+    sys.exit(0)
+
+# Registriere Signalbehandlung
+signal.signal(signal.SIGINT, signal_handler)  # Für CTRL+C
+signal.signal(signal.SIGTERM, signal_handler)  # Für TERM-Signal
 
 def filter_lines(target_language, verbose):
     for line in sys.stdin:
@@ -11,12 +21,12 @@ def filter_lines(target_language, verbose):
         try:
             detected_language = detect(line)
             if detected_language == target_language:
-                print(line)  # Ausgabe der Zeile, wenn die Sprache übereinstimmt
+                print(line, flush=True) # Ausgabe der Zeile, wenn die Sprache übereinstimmt
             elif verbose:  # Wenn -v gesetzt ist, auch unsichere Zeilen ausgeben
-                print(f"[uncertain] {line}")
+                print(f"[uncertain] {line}",flush=True)
         except LangDetectException:
             if verbose:
-                print(f"[detection failed] {line}")
+                print(f"[detection failed] {line}", flush=True)
 
 def main():
     # Initialisieren der Variablen
