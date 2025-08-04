@@ -1,0 +1,5 @@
+#youtube-dl --all-subs --write-auto-sub --write-info-json --hls-use-mpegts "$@"
+
+#youtube-dl --all-subs  --write-info-json --write-thumbnail --write-description --hls-use-mpegts --fixup warn "$@"
+~/bin/yt-dlp --all-subs  --write-info-json --write-thumbnail "$@"
+

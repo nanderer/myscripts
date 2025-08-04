@@ -1,0 +1,8 @@
+/home/t/.local/bin/wizlight on --ip 192.168.178.48 --brightness 200 --k 3000 &
+/home/t/.local/bin/wizlight on --ip 192.168.178.49 --brightness 200 --k 3000
+
+#~/bin/wizlight_cli on 192.168.178.48 &
+#~/bin/wizlight_cli on 192.168.178.49
+
+ssh mrt@debi -4 /home/mrt/.local/bin/wizallon.sh
+

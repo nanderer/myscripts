@@ -1,0 +1,2 @@
+yt-dlp -R 420 --all-subs  --write-info-json --write-thumbnail --write-description --hls-use-mpegts "$@"
+

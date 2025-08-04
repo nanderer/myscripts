@@ -1,0 +1,3 @@
+echo 192.168.178.49 | wizlight off
+ssh mrt@debi -4 /home/mrt/.local/bin/wiz02off.sh
+

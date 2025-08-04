@@ -1,0 +1,2 @@
+tail -f /tmp/subcat -n 420 | bash ~/bin/streaming_filter_script.sh 22  | fold -s -w $(( $(tput cols) - 1 ))
+
