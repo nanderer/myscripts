@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# this script is able to read stuff put to the clipboard in text and images (which will be OCR'ed using tesseract). 
+# It is inteded to be used with ocular and cbz/r files where you can easily select areas and copy them to the clipboard...
 LAST_HASH=""
 
 echo "[INFO] Clipwatcher gestartet..."
