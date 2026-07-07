@@ -1,8 +1,7 @@
-#echo 192.168.178.49 | wizlight off 
-#echo 192.168.178.48 | wizlight off 
-~/bin/wizlight_cli off 192.168.178.49 &
-~/bin/wizlight_cli off 192.168.178.48
+#"$(dirname "$0")/wizlight" off --ip 192.168.178.49
+#"$(dirname "$0")/wizlight" off --ip 192.168.178.48
+"$(dirname "$0")/wizlight_cli" off 192.168.178.49 &
+"$(dirname "$0")/wizlight_cli" off 192.168.178.48
 
-ssh mrt@debi -4 /home/mrt/.local/bin/wizalloff.sh
 
 
