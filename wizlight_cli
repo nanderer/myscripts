@@ -74,7 +74,10 @@ def main():
         color = None
         if args.color:
             color = tuple(map(int, args.color.split(',')))
-        loop.run_until_complete(set_state(args.ip, brightness, *color))
+        if color:
+            loop.run_until_complete(set_state(args.ip, brightness, *color))
+        else:
+            loop.run_until_complete(set_state(args.ip, brightness))
 
 if __name__ == "__main__":
     main()
