@@ -1,7 +1,7 @@
-"$(dirname "$0")/wizlight" on --ip 192.168.178.48 --brightness 10 --k 2420 &
-"$(dirname "$0")/wizlight" on --ip 192.168.178.49 --brightness 10 --k 3000
+#"$(dirname "$0")/wizlight" on --ip 192.168.178.48 --brightness 10 --k 2420 &
+#"$(dirname "$0")/wizlight" on --ip 192.168.178.49 --brightness 10 --k 3000
 
-#"$(dirname "$0")/wizlight_cli" on 192.168.178.48 &
-#"$(dirname "$0")/wizlight_cli" on 192.168.178.49
+"$(dirname "$0")/wizlight_cli" set-state 192.168.178.48 --brightness 10 &
+"$(dirname "$0")/wizlight_cli" set-state 192.168.178.49 --brightness 10
 
 

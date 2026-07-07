@@ -1,3 +1,4 @@
-"$(dirname "$0")/wizlight" off --ip 192.168.178.48
+#"$(dirname "$0")/wizlight" off --ip 192.168.178.48
+"$(dirname "$0")/wizlight_cli" off 192.168.178.48
 
 
