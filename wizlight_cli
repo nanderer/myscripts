@@ -59,26 +59,27 @@ def main():
 
     args = parser.parse_args()
 
-    loop = asyncio.get_event_loop()
+#    loop = asyncio.get_event_loop()
 
     if args.command == "discover":
-        loop.run_until_complete(discover_lights_cli())
+        asyncio.run(discover_lights_cli())
     elif args.command == "on":
-        loop.run_until_complete(turn_on_light(args.ip))
+        asyncio.run(turn_on_light(args.ip))
     elif args.command == "off":
-        loop.run_until_complete(turn_off_light(args.ip))
+        asyncio.run(turn_off_light(args.ip))
     elif args.command == "state":
-        loop.run_until_complete(get_state(args.ip))
+        asyncio.run(get_state(args.ip))
     elif args.command == "set-state":
         brightness = args.brightness
         color = None
         if args.color:
             color = tuple(map(int, args.color.split(',')))
         if color:
-            loop.run_until_complete(set_state(args.ip, brightness, *color))
+#            loop.run_until_complete(set_state(args.ip, brightness, *color))
+            asyncio.run(set_state(args.ip, brightness, *color))
         else:
-            loop.run_until_complete(set_state(args.ip, brightness))
+#            loop.run_until_complete(set_state(args.ip, brightness))
+            asyncio.run(set_state(args.ip, brightness))
 
 if __name__ == "__main__":
     main()
-
